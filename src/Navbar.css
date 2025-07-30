@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+.main-div{
+    /* width: 99vw; */
+    height: 15%;
+    background-color: #F4CA95;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+.logo-div img{
+    height: 50px;
+    /* padding-left: 20px; */
+}
+.logo-div{
+    padding-left: 20px;
+    box-sizing: border-box;
+}
+.sign-log-btn-div{
+    display: flex;
+}
+.signup-btn button, .login-btn button{
+    width: 90px;
+    height: 30px;
+    color: black;
+    background: linear-gradient(to right, #FDF4EA, #F4CA95);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.signup-btn{
+    margin-right: 20px;
+}
+
+
+@media only screen and (max-width:350px) {
+    .sign-log-btn-div{
+        display:block
+    }
+    .signup-btn button, .login-btn button{
+        background: none;
+        color: white;
+    }
+}

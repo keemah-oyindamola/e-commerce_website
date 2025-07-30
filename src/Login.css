@@ -1,0 +1,132 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.whole-section {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.my-phone {
+    width: 300px;
+    height: 600px;
+    border-top: none;
+    background: #000;
+    border-bottom: 5px solid #ccc;
+    border-left: 5px solid #ccc;
+    border-right: 5px solid #ccc;
+    /* border-radius: 36px; */
+    border-end-end-radius: 36px;
+    border-end-start-radius: 36px;
+    box-shadow: 0 10px 30px rgba(102, 100, 100, 0.5);
+}
+
+.my-screen {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background-image: url(images\ \(1\).jpeg); */
+    background-color: #000;
+    background-image: linear-gradient(rgba(14, 8, 8, 0.6), rgba(20, 1, 1, 0.6)), url('images\ \(1\).jpeg');
+    border-end-end-radius: 30px;
+    border-end-start-radius: 30px;
+}
+
+/* .my-screen::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; */
+/* background-color: rgba(0, 0, 0, 0.87); Adjust to make it more or less dim */
+/* z-index: 1;
+} */
+
+.my-logincontent {
+    padding: 100px 20px;
+}
+
+.my-logincontent h3 {
+    text-align: center;
+    color: #F4CA95;
+}
+
+.my-logincontent p {
+    color: #fff;
+    font-size: smaller;
+    text-align: center;
+}
+
+.login-input {
+    margin-top: 90px;
+    color: #fff;
+}
+
+.inputt {
+    margin-top: 15px;
+    color: #fff;
+}
+
+.login-input input,
+.inputt input {
+    width: 250px;
+    height: 30px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    background: transparent;
+    color: #fff;
+    outline: none;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+}
+
+.mylogin-btn button {
+    width: 250px;
+    height: 30px;
+    background-color: #F4CA95;
+    color: #fff;
+    border: none;
+    margin-top: 25px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.footer {
+    margin-top: 30px;
+    color: #fff;
+    font-size: smaller;
+    text-align: center;
+}
+
+.my-loginnotch {
+    width: 90px;
+    height: 3px;
+    background: #F4CA95;
+    margin-top: 30px;
+    margin-left: 85px;
+}
+
+input:focus {
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.icons img {
+    width: 30px;
+    border-radius: 100%;
+    margin-left: 10px;
+}
