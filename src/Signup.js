@@ -13,6 +13,7 @@ const Signup = () => {
     const [loading, setloading] = useState(false)
     const navigate = useNavigate()
 
+    const endpoint = ("https://e-commerce-website-backend-rcrp.onrender.com")
     const formik = useFormik({
         initialValues: {
             username: "",
@@ -27,7 +28,7 @@ const Signup = () => {
         onSubmit: (value) => {
             console.log(value);
             setloading(true)
-            axios.post("http://localhost:5006/user/signup", value)
+            axios.post(`${endpoint}/user`, value)
                 .then((res) => {
                     console.log(res.data);
                     toast.success("Signup successful")
