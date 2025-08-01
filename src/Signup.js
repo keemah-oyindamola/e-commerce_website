@@ -28,7 +28,7 @@ const Signup = () => {
         onSubmit: (value) => {
             console.log(value);
             setloading(true)
-            axios.post(`${endpoint}/user`, value)
+            axios.post(`${endpoint}/user/signup`, value)
                 .then((res) => {
                     console.log(res.data);
                     toast.success("Signup successful")
