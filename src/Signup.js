@@ -23,7 +23,7 @@ const Signup = () => {
         validationSchema: yup.object({
             username: yup.string().min(4, "username is too short").required("usename is required"),
             email: yup.string().email("email is required").required("email is required"),
-            password: yup.string().min(5, "password is short").matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-])/,"Password must contain uppercase, lowercase, number, and special character").required("password is required")
+            password: yup.string().min(5, "password is too short").matches(/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$ %^&*-])/,"Password must contain uppercase, lowercase, number, and special character").required("password is required")
         }),
         onSubmit: (value) => {
             console.log(value);

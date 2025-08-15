@@ -4,6 +4,7 @@ import { useFormik } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { ToastContainer, toast } from 'react-toastify'
+import * as yup from 'yup'
 import applee from "./applelogo.png"
 import googlee from "./googlelogo.png"
 import facebookk from "./images.png"
@@ -17,6 +18,10 @@ const Login = () => {
             email: "",
             password: ""
         },
+        validationSchema: yup.object({
+            email: yup.string.email("Invalid email address").required("Email is required"),
+            password: yup.string().min(5, "Password must be at least 5 characters").required("Password is required"),
+        }),
         onSubmit: async (value) => {
             try {
                 setloadingg(true)
@@ -35,7 +40,7 @@ const Login = () => {
                 } else {
                     toast.error("An error occurred during login");
                 }
-                setloading(false)
+                setloadingg(false)
             }
         }
     })
@@ -44,16 +49,18 @@ const Login = () => {
             <form onSubmit={formik.handleSubmit} action="">
                 <div className="my-phone">
                     <div className='my-screen'>
-                        <div class="my-logincontent">
+                        <div className="my-logincontent">
                             <h3>Log In</h3>
                             <p>Hi! Welcome </p>
                             <div className="login-input">
                                 <span>Email</span><br />
                                 <input onChange={formik.handleChange} onBlur={formik.handleBlur} type="email" name="email" id="" placeholder='Enter Your Email' />
+                                <p>{formik.touched.email && formik.errors.email ? formik.errors.email : ""}</p>
                             </div>
                             <div className="inputt">
                                 <span>Password</span><br />
                                 <input onChange={formik.handleChange} onBlur={formik.handleBlur} type="password" name="password" id="" placeholder='Enter Your Password' />
+                                <p>{formik.touched.password && formik.errors.password ? formik.errors.password : ""}</p>
                             </div>
                             <div className="mylogin-btn">
                                 <button type='submit'>{loadingg ? "......." : "Login"}</button>
