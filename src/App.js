@@ -13,7 +13,8 @@ const App = () => {
         <Route path='/' element={<Landingpg />} />
         <Route path='/signup' element={<Signup/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/dashboard/:userid' element={<Dashbd/>}/>
+        {/* <Route path='/dashboard/:userid' element={<Dashbd/>}/> */}
+        <Route path='/dashboard' element={<Dashbd/>}/>
       </Routes>
     </>
 

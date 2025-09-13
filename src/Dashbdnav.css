@@ -1,0 +1,100 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.main-div {
+  height: 15%;
+  background-color: #F4CA95;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+/* Logo */
+.logo-div img {
+  height: 50px;
+}
+
+/* Center Nav Links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #333;
+}
+
+/* Right Section */
+.right-nav {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Cart */
+.cart-link {
+  position: relative;
+  color: black;
+  text-decoration: none;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background: red;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 2px 6px;
+  border-radius: 50%;
+}
+
+/* Auth Buttons */
+.signup-btn button,
+.login-btn button {
+  width: 90px;
+  height: 30px;
+  color: black;
+  background: linear-gradient(to right, #FDF4EA, #F4CA95);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.signup-btn {
+  margin-right: 10px;
+}
+
+/* Mobile Responsive */
+@media only screen and (max-width: 768px) {
+  .nav-links {
+    display: none; /* hide links on small screens */
+  }
+
+  .sign-log-btn-div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .signup-btn button,
+  .login-btn button {
+    background: none;
+    border: 1px solid black;
+    color: black;
+  }
+}

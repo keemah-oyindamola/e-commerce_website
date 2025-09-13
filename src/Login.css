@@ -97,6 +97,11 @@
     border-radius: 10px;
 }
 
+.mylogin-btn button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
 .footer {
     margin-top: 30px;
     color: #fff;

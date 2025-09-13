@@ -2,6 +2,7 @@ import React from 'react'
 import './Landingpg.css'
 import firstimg from './firstimg.jpg'
 import Navbar from './Navbar'
+import FashionShowcase from './Landpgsesec'
 const Landingpg = () => {
   return (
     <>
@@ -30,15 +31,16 @@ const Landingpg = () => {
           </div>
           <div className="curve-bg"></div>
         </div>
-        <div className="second-section">
+        {/* <div className="second-section">
           <div>
             <h1>About the store</h1>
 
 
 
           </div>
-        </div>
+        </div> */}
 
+        <FashionShowcase/>
       </div>
     </>
 

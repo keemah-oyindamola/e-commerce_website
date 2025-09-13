@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import "./Login.css"
+import { FaSpinner } from "react-icons/fa";
 import { useFormik } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
@@ -62,8 +63,8 @@ const Login = () => {
                                 <input onChange={formik.handleChange} onBlur={formik.handleBlur} type="password" name="password" id="" placeholder='Enter Your Password' />
                                 <p>{formik.touched.password && formik.errors.password ? formik.errors.password : ""}</p>
                             </div>
-                            <div className="mylogin-btn">
-                                <button type='submit'>{loadingg ? "......." : "Login"}</button>
+                            <div className="mylogin-btn" disabled={loadingg}>
+                                <button type='submit'>{loadingg ? <FaSpinner className="animate-spin" /> : "Login"}</button>
                                 <ToastContainer />
                             </div>
 

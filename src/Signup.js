@@ -76,7 +76,8 @@ const Signup = () => {
                                 <p>{formik.touched.password && formik.errors.password ? formik.errors.password : ""}</p>
                             </div>
                             <div className="mysignup-btn">
-                                <button type='submit'>{loading ? <FaSpinner className="animate-spin" /> : "Sign up"}</button>
+                                <button type='submit' disabled={loading}>
+                                    {loading ? <FaSpinner className="animate-spin" /> : "Sign up"}</button>
                                 <ToastContainer />
                             </div>
                             <p className='footer'>Or sign in with</p>
