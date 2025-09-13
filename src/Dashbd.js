@@ -1,8 +1,16 @@
 import React from 'react'
-
+import "./Dashbd.css"
+import sectimg from "./images.jpeg"
 const Dashbd = () => {
   return (
-    <div>Dashbd</div>
+    <>
+      <div className="sector">
+        <div className='sectimg'>
+          <img src={sectimg} alt="" />
+        </div>
+        <div className='abtthestore'></div>
+      </div>
+    </>
   )
 }
 

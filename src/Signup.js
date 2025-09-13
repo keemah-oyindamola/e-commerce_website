@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ToastContainer, toast } from 'react-toastify'
 import "./Signup.css"
+import { FaSpinner } from "react-icons/fa";
 import { useFormik } from 'formik'
 import { useNavigate } from 'react-router-dom'
 import * as yup from 'yup'
@@ -75,7 +76,7 @@ const Signup = () => {
                                 <p>{formik.touched.password && formik.errors.password ? formik.errors.password : ""}</p>
                             </div>
                             <div className="mysignup-btn">
-                                <button type='submit'>{loading ? "............" : "Sign up"}</button>
+                                <button type='submit'>{loading ? <FaSpinner className="animate-spin" /> : "Sign up"}</button>
                                 <ToastContainer />
                             </div>
                             <p className='footer'>Or sign in with</p>

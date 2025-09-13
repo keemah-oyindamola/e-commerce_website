@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.sector{
+    display: flex;
+    align-items: center;
+    background: linear-gradient(to bottom right, #ccc, #f4ca95);
+    width: 100vw;
+    height: 100vh;
+}
